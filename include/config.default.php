@@ -105,6 +105,7 @@ $config_windows=false;
 
 # If using ImageMagick/GraphicsMagick, uncomment and set next 2 lines
 # $imagemagick_path='/sw/bin';
+$imagemagick_path='/usr/bin';
 # $ghostscript_path='/sw/bin';
 $ghostscript_executable='gs';
 

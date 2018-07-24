@@ -77,7 +77,7 @@ if(array_search('nosetup',$argv)===false)
     
 // Reset any odd config settings by reapplying config.default and config.new_installs.php
 // Save any important settings e.g for mysql connections first 
-$savedconfigs = array("mysql_db","mysql_server","mysql_server_port","mysql_username","mysql_password","imagemagick_path","ghostscript_path","exiftool_path");
+$savedconfigs = array("mysql_db","mysql_server","mysql_server_port","mysql_username","mysql_password");
 
 foreach($savedconfigs as $savedconfig)
     {
@@ -229,7 +229,7 @@ foreach ($tests as $key => $test_stack)
 				}
 			if ($key=="test_list")
 				{
-				exit();	# If a core test fails cancel all other tests
+				exit(1);	# If a core test fails cancel all other tests
 				}
 			else
 				{
